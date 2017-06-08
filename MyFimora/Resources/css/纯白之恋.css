@@ -1,0 +1,30 @@
+
+
+QWidget#FilmoraToolBarWnd
+{
+ background-color: rgb(241,241,241);
+}
+
+QWidget#resourceToolBar
+{
+ background-color: rgb(79,177,185);
+}
+
+QListWidget#ResListView
+{
+  background-color: rgb(231,231,231);
+}
+
+QWidget#MeidaPlayerView
+{
+  background-color: rgb(38,38,38); 
+}
+
+QWidget#MediaPlayerView_ToolBarBase
+{
+  background-color: rgb(98,103,106); 
+}
+
+
+
+

@@ -1,0 +1,140 @@
+
+QWidget#PropertySettingWnd
+{
+  background-color: rgb(113,200,209); 
+}
+
+QWidget#settingWndTitle
+{
+  color:white;
+}
+
+QLabel#tmpFolderLabel,#captureFileFolderLabel,#LanguageLabel,#UpdateSettinglabel, #GpuLabel,#MessageCenterLabel,#ResetLabel
+{
+ font: bold;
+}
+QLabel#TwoLevelLanguageLabel,#SecondLevelUpdateLabel,#GpuTipsLabel,#MessageCenterTipsLabel,#LinkLabel,#ResetTipsLabel
+{
+   color:white;
+}
+
+QPushButton
+{
+   background-color: black;
+   border:1px solid;
+   border-radius:6px;
+   font-size:12px;          
+   color:white;    
+}
+
+QPushButton:hover
+{
+   background-color:rgb(255,255,255);
+   border:1px solid;
+   border-radius:6px;
+   font-size:12px;          
+   color:black; 
+}
+
+QCheckBox::indicator
+{
+   image:url(:/MyFimora/Resources/checkBox_Normal.png);
+    min-height:17px;
+	min-width:17px;
+}
+
+QCheckBox::indicator:pressed
+{
+   image:url(:/MyFimora/Resources/checkbox_press.png);
+    min-height:17px;
+	min-width:17px;
+}
+
+QCheckBox::indicator:checked
+{
+   image:url(:/MyFimora/Resources/checkbox_checked.png);
+    min-height:17px;
+	min-width:17px;
+}
+
+QCheckBox::indicator:hover
+{
+   image:url(:/MyFimora/Resources/checkBox_hover.png);
+    min-height:17px;
+	min-width:17px;
+}
+
+QLineEdit
+{
+   background-color: rgb(79,172,181); 
+   border: 1px solid gray;
+   color: white;
+}
+
+QComboBox{
+background-color: rgb(79,172,181);  
+border:1px solid gray;
+padding: 1px 2px 1px 2px;  /* #设置文字在组合框中的内编边距 */
+color:white;
+}
+
+QComboBox::down-arrow{
+image:url(:/MyFimora/Resources/lineEditState1.png);
+width: 18px;
+height: 20px;
+}
+
+QComboBox:open{
+ background-color: rgb(69,158,167); 
+ color:white;
+}
+
+QComboBox::down-arrow:open{
+ background-color: rgb(69,158,167); 
+ image:url(:/MyFimora/Resources/lineEditState2.png);
+ width: 18px;
+ height: 20px;
+}
+
+/* height: 15px; 
+   width:184px; 
+*/
+QComboBox::drop-down{
+subcontrol-position: top right;
+border:none;
+background:transparent;
+}
+
+QComboBox QAbstractItemView::item
+{
+ height:15px;
+ color:white;
+ /* selection-background-color:red; *//*鼠标划过时当前项的背景色 */
+ outline:0px;
+}
+
+QComboBox QAbstractItemView
+{
+ outline:0px;
+}
+
+QListView::item 
+{
+	background:rgb(69,158,167);
+	color:white;
+	outline:0px;
+}
+
+QListView::item:hover 
+{
+    background: #3399FF;
+	color:white;
+}
+
+
+
+
+
+
+
+
