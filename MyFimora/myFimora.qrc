@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/MyFimora">
+        <file>Resources/1.png</file>
+        <file>Resources/2.png</file>
+        <file>Resources/3.png</file>
+        <file>Resources/checkbox_checked.png</file>
+        <file>Resources/checkBox_hover.png</file>
+        <file>Resources/checkBox_Normal.png</file>
+        <file>Resources/checkbox_press.png</file>
+        <file>Resources/lineEditState1.png</file>
+        <file>Resources/lineEditState2.png</file>
+        <file>Resources/openFolder_Normal.png</file>
+        <file>Resources/openFolder_Pressed.png</file>
+        <file>Resources/skin.png</file>
+        <file>Resources/time.jpg</file>
+        <file>Resources/TitleBar_TitleIcon.png</file>
+    </qresource>
+    <qresource prefix="/css">
+        <file>Resources/css/property.css</file>
+        <file>Resources/css/纯白之恋.css</file>
+        <file>Resources/css/深邃魅黑.css</file>
+    </qresource>
+</RCC>

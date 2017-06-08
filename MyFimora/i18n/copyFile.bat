@@ -1,0 +1,2 @@
+copy E:\vs_programeFile\cplusplus\qt_study\dragAndDrop\drag\MyFimora\i18n\translate_Zh_CN.qm   E:\vs_programeFile\cplusplus\qt_study\dragAndDrop\drag\bin\x64\Debug\i18n
+copy E:\vs_programeFile\cplusplus\qt_study\dragAndDrop\drag\MyFimora\i18n\translate_En_CN.qm  E:\vs_programeFile\cplusplus\qt_study\dragAndDrop\drag\bin\x64\Debug\i18n
