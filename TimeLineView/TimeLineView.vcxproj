@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4790C9C3-2896-495A-B149-78C6E531A45A}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;TIMELINEVIEW_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;TIMELINEVIEW_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(SolutionDir)include\inc_MatterView;$(SolutionDir)include\inc_TimelineView;$(SolutionDir)include\inc_CommonLib;$(QTDIR)\include\QtXml;$(SolutionDir)inc;$(SolutionDir)include;$(SolutionDir)inc\include;$(SolutionDir)inc\interface;$(SolutionDir)inc\Shared;$(SolutionDir)inc\ThumbnailExtract;$(SolutionDir)inc\Include\NLEPropComPtr;$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM;$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common;$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type;$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform);$(SolutionDir)alib\$(Platform);$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Xmld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName).lib $(SolutionDir)\alib\$(Platform)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;TIMELINEVIEW_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;TIMELINEVIEW_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dragclip.cpp" />
+    <ClCompile Include="dragproject.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_ClipBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Command.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ComplexClipController.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_drag.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_dragclip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_dragproject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ProjetListWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_resourcestackview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ThumbnailExtractHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ThumbnailExtractor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_timelinecommandbase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TimelineManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_timelineview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_timeruler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_toolbar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TrackBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TrackManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_res.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ClipBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Command.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ComplexClipController.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_drag.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_dragclip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_dragproject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ProjetListWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_resourcestackview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ThumbnailExtractHelper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ThumbnailExtractor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_timelinecommandbase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TimelineManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_timelineview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_timeruler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_toolbar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TrackBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TrackManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ProjetListWidget.cpp" />
+    <ClCompile Include="resourcestackview.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="timelinecommandbase.cpp" />
+    <ClCompile Include="TimelineManager\ClipBase.cpp" />
+    <ClCompile Include="TimelineManager\Command.cpp" />
+    <ClCompile Include="TimelineManager\ComplexClipController.cpp" />
+    <ClCompile Include="TimelineManager\OperatorBase.cpp" />
+    <ClCompile Include="TimelineManager\ThumbnailExtractHelper.cpp" />
+    <ClCompile Include="TimelineManager\ThumbnailExtractor.cpp" />
+    <ClCompile Include="TimelineManager\TimelineManager.cpp" />
+    <ClCompile Include="TimelineManager\TrackBase.cpp" />
+    <ClCompile Include="TimelineManager\TrackManager.cpp" />
+    <ClCompile Include="timelineview.cpp" />
+    <ClCompile Include="timeruler.cpp" />
+    <ClCompile Include="toolbar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\include\inc_TimelineView\timelineview.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing timelineview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../../include/inc_TimelineView/timelineview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing timelineview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../../include/inc_TimelineView/timelineview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing timelineview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../../include/inc_TimelineView/timelineview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing timelineview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../../include/inc_TimelineView/timelineview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <ClInclude Include="..\include\inc_TimelineView\timelineview_global.h" />
+    <CustomBuild Include="resourcestackview.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing resourcestackview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../resourcestackview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing resourcestackview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../resourcestackview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing resourcestackview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../resourcestackview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing resourcestackview.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../resourcestackview.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="timelinecommandbase.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing timelinecommandbase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timelinecommandbase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing timelinecommandbase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timelinecommandbase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing timelinecommandbase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timelinecommandbase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing timelinecommandbase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timelinecommandbase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <ClInclude Include="TimelineManager\OperatorBase.h" />
+    <ClInclude Include="TimelineManager\TypeDefine.h" />
+    <CustomBuild Include="TimelineManager\TrackManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TrackManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TrackManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TrackManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TrackManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\TrackBase.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TrackBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TrackBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TrackBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TrackBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TrackBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\TimelineManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TimelineManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TimelineManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TimelineManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TimelineManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TimelineManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TimelineManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TimelineManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/TimelineManager.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\ThumbnailExtractor.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ThumbnailExtractor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractor.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing ThumbnailExtractor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractor.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ThumbnailExtractor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractor.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ThumbnailExtractor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractor.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\ThumbnailExtractHelper.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ThumbnailExtractHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractHelper.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing ThumbnailExtractHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractHelper.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ThumbnailExtractHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractHelper.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ThumbnailExtractHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ThumbnailExtractHelper.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\ComplexClipController.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ComplexClipController.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ComplexClipController.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing ComplexClipController.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ComplexClipController.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ComplexClipController.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ComplexClipController.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ComplexClipController.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ComplexClipController.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\Command.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Command.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/Command.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing Command.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/Command.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Command.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/Command.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing Command.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/Command.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TimelineManager\ClipBase.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ClipBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ClipBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing ClipBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ClipBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)include\inc_MatterView" "-I$(SolutionDir)include\inc_TimelineView" "-I$(SolutionDir)include\inc_CommonLib" "-I$(QTDIR)\include\QtXml" "-I$(SolutionDir)inc" "-I$(SolutionDir)include" "-I$(SolutionDir)inc\include" "-I$(SolutionDir)inc\interface" "-I$(SolutionDir)inc\Shared" "-I$(SolutionDir)inc\ThumbnailExtract" "-I$(SolutionDir)inc\Include\NLEPropComPtr" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\COM" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Common" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\Interface\C++\Type" "-I$(SolutionDir)inc\Externlib\MultiMediaSDK\InterfaceBase\C++\Common"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ClipBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ClipBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ClipBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../TimelineManager/ClipBase.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <ClInclude Include="resource.h" />
+    <CustomBuild Include="toolbar.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing toolbar.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../toolbar.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing toolbar.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../toolbar.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing toolbar.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../toolbar.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing toolbar.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../toolbar.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="timeruler.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing timeruler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timeruler.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing timeruler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timeruler.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing timeruler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timeruler.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing timeruler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../timeruler.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="ProjetListWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ProjetListWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../ProjetListWidget.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing ProjetListWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../ProjetListWidget.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ProjetListWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../ProjetListWidget.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ProjetListWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../ProjetListWidget.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="dragproject.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing dragproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragproject.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing dragproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragproject.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing dragproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragproject.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing dragproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragproject.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="dragclip.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing dragclip.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragclip.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing dragclip.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragclip.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing dragclip.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragclip.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing dragclip.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../dragclip.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <CustomBuild Include="drag.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing drag.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../drag.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing drag.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../drag.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing drag.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../drag.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing drag.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../drag.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTIMELINEVIEW_LIB -D_WINDLL "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Resources\res.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="translate_Zh_CN.ts" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="VS2013_QT5.4.0" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
