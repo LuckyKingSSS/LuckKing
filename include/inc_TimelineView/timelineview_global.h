@@ -1,0 +1,12 @@
+#ifndef TIMELINEVIEW_GLOBAL_H
+#define TIMELINEVIEW_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef TIMELINEVIEW_LIB
+# define TIMELINEVIEW_EXPORT Q_DECL_EXPORT
+#else
+# define TIMELINEVIEW_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TIMELINEVIEW_GLOBAL_H

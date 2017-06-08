@@ -1,0 +1,12 @@
+#ifndef RESOURCEVIEW_GLOBAL_H
+#define RESOURCEVIEW_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef RESOURCEVIEW_LIB
+# define RESOURCEVIEW_EXPORT Q_DECL_EXPORT
+#else
+# define RESOURCEVIEW_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // RESOURCEVIEW_GLOBAL_H
